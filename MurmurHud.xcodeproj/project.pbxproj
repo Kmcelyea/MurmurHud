@@ -19,6 +19,8 @@
 		845BEB161604ECE400A9E847 /* LaunchMurmur.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 845BEB151604ECE400A9E847 /* LaunchMurmur.scpt */; };
 		845BEB1A1604F06200A9E847 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 845BEB191604F06200A9E847 /* Icon.png */; };
 		845BEB211604F68F00A9E847 /* TerminalQuit.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 845BEB201604F68F00A9E847 /* TerminalQuit.scpt */; };
+		84E85404161E7EC700475071 /* NomClockClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E85403161E7EC700475071 /* NomClockClass.m */; };
+		84E85408161E7F0000475071 /* KMHudController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E85407161E7F0000475071 /* KMHudController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,10 @@
 		845BEB151604ECE400A9E847 /* LaunchMurmur.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaunchMurmur.scpt; sourceTree = "<group>"; };
 		845BEB191604F06200A9E847 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		845BEB201604F68F00A9E847 /* TerminalQuit.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = TerminalQuit.scpt; sourceTree = "<group>"; };
+		84E85402161E7EC700475071 /* NomClockClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NomClockClass.h; sourceTree = "<group>"; };
+		84E85403161E7EC700475071 /* NomClockClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NomClockClass.m; sourceTree = "<group>"; };
+		84E85406161E7F0000475071 /* KMHudController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMHudController.h; path = Controllers/KMHudController.h; sourceTree = "<group>"; };
+		84E85407161E7F0000475071 /* KMHudController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMHudController.m; path = Controllers/KMHudController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +142,11 @@
 		845BEB051604E5F800A9E847 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				84E85402161E7EC700475071 /* NomClockClass.h */,
+				84E85403161E7EC700475071 /* NomClockClass.m */,
 				845BEB041604E5EC00A9E847 /* MAAttached */,
+				84E85406161E7F0000475071 /* KMHudController.h */,
+				84E85407161E7F0000475071 /* KMHudController.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -223,6 +233,8 @@
 				845BEAFB1604E4D300A9E847 /* KMAppDelegate.m in Sources */,
 				845BEB091604E6BC00A9E847 /* MAAttachedWindow.m in Sources */,
 				845BEB0C1604E6C800A9E847 /* CustomView.m in Sources */,
+				84E85404161E7EC700475071 /* NomClockClass.m in Sources */,
+				84E85408161E7F0000475071 /* KMHudController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

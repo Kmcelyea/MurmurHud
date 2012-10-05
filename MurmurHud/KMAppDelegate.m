@@ -15,11 +15,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
-}
-
--(void)awakeFromNib {
-    
     [attachedWindow setLevel:NSMainMenuWindowLevel];
     float width = 25.0;
     float height = [[NSStatusBar systemStatusBar] thickness];
@@ -27,7 +22,9 @@
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:width];
     
     [statusItem setView:[[CustomView alloc] initWithFrame:viewFrame controller:self]];
-    
+}
+
+-(void)awakeFromNib {
     NSString * path = [[NSBundle mainBundle]pathForResource:@"LaunchMurmur" ofType:@"scpt"];
     NSURL * url = [NSURL fileURLWithPath:path];
     NSAppleScript * script = [[NSAppleScript alloc] initWithContentsOfURL:url error:nil];
@@ -42,7 +39,7 @@
                                                 attachedToPoint:pt
                                                        inWindow:nil
                                                          onSide:MAPositionBottom
-                                                     atDistance:18.0];
+                                                     atDistance:5.0];
         [attachedWindow makeKeyAndOrderFront:self];
     } else {
         [attachedWindow orderOut:self];
@@ -52,29 +49,6 @@
 }
 
 
-#pragma mark Actions
-
--(IBAction)startMurmur:(id)sender {
-    NSString * path = [[NSBundle mainBundle]pathForResource:@"LaunchMurmur" ofType:@"scpt"];
-    NSURL * url = [NSURL fileURLWithPath:path];
-    NSAppleScript * script = [[NSAppleScript alloc] initWithContentsOfURL:url error:nil];
-    [script executeAndReturnError:nil];
-    
-}
-
-
--(IBAction)stopMurmur:(id)sender {
-    NSString * path = [[NSBundle mainBundle]pathForResource:@"TerminalQuit" ofType:@"scpt"];
-    NSURL * url = [NSURL fileURLWithPath:path];
-    NSAppleScript * script = [[NSAppleScript alloc] initWithContentsOfURL:url error:nil];
-    [script executeAndReturnError:nil];
-    
-}
-
--(IBAction)quitHud:(id)sender {
-    
-    [NSApp terminate:self];
-}
 
 #pragma mark End Application
 
@@ -82,7 +56,10 @@
 
     _view = nil;
     _statusMenu = nil;
-    
+    NSString * path = [[NSBundle mainBundle]pathForResource:@"TerminalQuit" ofType:@"scpt"];
+    NSURL * url = [NSURL fileURLWithPath:path];
+    NSAppleScript * script = [[NSAppleScript alloc] initWithContentsOfURL:url error:nil];
+    [script executeAndReturnError:nil];
 }
 
 @end

@@ -19,9 +19,7 @@
 @property (nonatomic, strong) IBOutlet NSView *view;
 @property (nonatomic, strong) NSMenu *statusMenu;
 
--(IBAction)startMurmur:(id)sender;
--(IBAction)stopMurmur:(id)sender;
--(IBAction)quitHud:(id)sender;
+
 -(void)toggleAttachedWindowAtPoint:(NSPoint)pt;
 
 @end
